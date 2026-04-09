@@ -2,24 +2,48 @@ public class Main {
     public static void main(String[] args) {
 
         ProductManager pm=new ProductManager();
-
-        pm.addProduct(new Product(1,"Apple"));
-        pm.addProduct(new Product(2,"Banana"));
-        pm.addProduct(new Product(3,"Orange"));
-        pm.addProduct(new Product(4,"Kiwi"));
-        pm.addProduct(new Product(5,"Carrot"));
+        try {
+            pm.addProduct(new Product(1, "Apple"));
+            pm.addProduct(new Product(2, "Banana"));
+            pm.addProduct(new Product(3, "Orange"));
+            pm.addProduct(new Product(4, "Kiwi"));
+            pm.addProduct(new Product(5, "Carrot"));
+        } catch(DuplicateProductException e){
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("---- Initial Products ----");
         pm.showAllProducts();
+        try {
+            pm.removeProduct(3);
+        }catch (ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            pm.updateProduct(5, "Watermelon");
+        }catch(ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            pm.getProduct(4);
+        }catch (ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
-        pm.removeProduct(3);
+        try {
+            pm.getProduct(10);
+        }catch (ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
-        pm.updateProduct(5,"Watermelon");
+        try {
+            pm.removeProduct(10);
+        }catch (ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
-        pm.getProduct(4);
 
-        pm.getProduct(10);
-        pm.removeProduct(10);
+
 
         pm.showAllProducts();
 

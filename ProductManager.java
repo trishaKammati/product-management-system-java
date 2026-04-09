@@ -6,13 +6,13 @@ public class ProductManager {
     public ProductManager(){
         productMap=new HashMap<>();
     }
-    public void addProduct(Product product){
+    public void addProduct(Product product) throws DuplicateProductException{
         if(productMap.containsKey(product.getId())){
-            System.out.println("Id already exists");
+            throw new DuplicateProductException("Product with this Id already Exists");
         }
-        else {
-            productMap.put(product.getId(), product);
-        }
+
+        productMap.put(product.getId(), product);
+
     }
 
     public void showAllProducts(){
@@ -26,28 +26,28 @@ public class ProductManager {
         }
     }
 
-    public void removeProduct(int id){
+    public void removeProduct(int id) throws ProductNotFoundException{
         if(productMap.containsKey(id)){
             productMap.remove(id);
             System.out.println("Product removed successfully");
         }
         else {
-            System.out.println("Product Not Found");
+            throw new ProductNotFoundException("Product doesn't exists");
         }
     }
 
-    public void getProduct(int id){
+    public void getProduct(int id) throws ProductNotFoundException{
         if(productMap.containsKey(id)){
             Product p=productMap.get(id);
             System.out.println(p.getId()+" -> "+p.getName());
         }
         else
         {
-            System.out.println("Product Not Found");
+           throw new ProductNotFoundException("Product doesn't exists");
         }
     }
 
-    public void updateProduct(int id,String newName){
+    public void updateProduct(int id,String newName) throws ProductNotFoundException{
         if(productMap.containsKey(id)){
             Product p=productMap.get(id);
             p.setName(newName);
@@ -55,7 +55,7 @@ public class ProductManager {
         }
         else
         {
-            System.out.println("Product Not Found");
+            throw new ProductNotFoundException("Product doesn't exists");
         }
     }
 
