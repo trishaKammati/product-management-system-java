@@ -54,3 +54,13 @@ A simple backend system to manage products using Java Collections and Object-Ori
 * Connect with Database (JDBC)
 * Build REST API (Spring Boot)
 
+## 🚀 New Improvements (v2)
+
+- Added exception handling (try-catch-finally)
+- Implemented custom exceptions:
+  - DuplicateProductException
+  - ProductNotFoundException
+- Improved validation logic
+- Separated business logic and error handling
+
+
