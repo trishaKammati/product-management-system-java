@@ -22,6 +22,8 @@ A simple backend system to manage products using Java Collections and Object-Ori
 * Object-Oriented Programming (Encapsulation, Classes)
 * CRUD Operations
 * Validation Handling
+* Exception Handling
+* File Handling
 
 ---
 
@@ -62,5 +64,17 @@ A simple backend system to manage products using Java Collections and Object-Ori
   - ProductNotFoundException
 - Improved validation logic
 - Separated business logic and error handling
+
+## 🚀 New Improvements (v3)
+
+-Data is now stored permanently in file
+-Implemented:
+     saveToFile()
+     loadFromFile()
+-Used:
+    BufferedWriter
+    BufferedReader
+-Data format: id,name
+-Data is automatically loaded on startup
 
 
