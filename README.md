@@ -1,80 +1,105 @@
-# 🛒 Product Management System (Java)
+# 🛒 Product Management System (Java Backend)
 
 ## 📌 Overview
 
-A simple backend system to manage products using Java Collections and Object-Oriented Programming.
+A backend system built using Core Java, demonstrating step-by-step evolution from in-memory storage to a database-driven application using JDBC and MySQL.
 
 ---
 
 ## 🚀 Features
+
+### ✅ Version 1 — Collections
 
 * Add Product
 * Remove Product
 * Update Product
 * Get Product by ID
 * View All Products
+* Used HashMap for in-memory storage
+
+---
+
+### ✅ Version 2 — Exception Handling
+
+* Custom Exceptions:
+
+  * DuplicateProductException
+  * ProductNotFoundException
+* Improved validation and error handling
+
+---
+
+### ✅ Version 3 — File Handling
+
+* Data stored permanently in file
+* Implemented:
+
+  * saveToFile()
+  * loadFromFile()
+* Used:
+
+  * BufferedWriter
+  * BufferedReader
+* Data format: `id,name`
+
+---
+
+### ✅ Version 4 — JDBC + MySQL ⭐
+
+* Connected Java application with MySQL database
+* Implemented full CRUD operations:
+
+  * INSERT (Add Product)
+  * SELECT (Get Product)
+  * UPDATE (Update Product)
+  * DELETE (Remove Product)
+* Used PreparedStatement for secure queries
+* Added PRIMARY KEY for data integrity
 
 ---
 
 ## 🧠 Concepts Used
 
 * Java Collections (HashMap)
-* Object-Oriented Programming (Encapsulation, Classes)
-* CRUD Operations
-* Validation Handling
+* OOP (Encapsulation, Classes)
 * Exception Handling
 * File Handling
+* JDBC
+* MySQL
+* CRUD Operations
 
 ---
 
 ## 🛠️ Tech Stack
 
 * Java
+* MySQL
+* JDBC
 
 ---
 
 ## 📂 Project Structure
 
-* Product.java → Product model
-* ProductManager.java → Business logic
+* Product.java → Model
+* ProductManager.java → Business Logic (Collections + File + JDBC)
 * Main.java → Execution
 
 ---
 
 ## 🎯 Learning Outcomes
 
-* Learned how to use HashMap for fast data storage
-* Understood real-world backend logic
-* Applied OOP with Collections
-* Built a mini backend system
+* Built a real backend system step-by-step
+* Understood transition:
+
+  * Memory → File → Database
+* Learned JDBC integration with MySQL
+* Applied real-world backend logic and structure
 
 ---
 
-## 📌 Future Improvements
+## 🚀 Future Improvements
 
-* Add Exception Handling
-* Connect with Database (JDBC)
-* Build REST API (Spring Boot)
-
-## 🚀 New Improvements (v2)
-
-- Added exception handling (try-catch-finally)
-- Implemented custom exceptions:
-  - DuplicateProductException
-  - ProductNotFoundException
-- Improved validation logic
-- Separated business logic and error handling
-
-## 🚀 New Improvements (v3)
-
--Data is now stored permanently in file
--Implemented:
-     saveToFile()
-     loadFromFile()
--Used:
-    BufferedWriter
-    BufferedReader
--Data format: id,name
--Data is automatically loaded on startup
-
-
+* Spring Boot (REST APIs)
+* Layered Architecture (Controller, Service, Repository)
+* Validation and DTOs
+* Authentication
