@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class ProductManager {
 
@@ -56,6 +57,33 @@ public class ProductManager {
         else
         {
             throw new ProductNotFoundException("Product doesn't exists");
+        }
+    }
+
+    public void saveToFile(){
+        try(BufferedWriter writer=new BufferedWriter(new FileWriter("Products.txt"))) {
+
+            for(Product p: productMap.values()) {
+                writer.write(p.getId() + "," + p.getName());
+                writer.newLine();
+            }
+
+        } catch (IOException e){
+            System.out.println("Error Saving File:"+e.getMessage());
+        }
+    }
+
+    public void loadFromFile(){
+        try(BufferedReader reader=new BufferedReader(new FileReader("Products.txt"))){
+            String line;
+            while((line=reader.readLine())!=null){
+                String[] parts=line.split(",");
+                int id= Integer.parseInt(parts[0]);
+                Product p=new Product(id,parts[1]);
+                productMap.put(id,p);
+            }
+        } catch (IOException e){
+            System.out.println("Error Reading File:"+e.getMessage());
         }
     }
 

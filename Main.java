@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
         ProductManager pm=new ProductManager();
+        pm.loadFromFile();
         try {
             pm.addProduct(new Product(1, "Apple"));
             pm.addProduct(new Product(2, "Banana"));
@@ -42,10 +43,9 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-
-
-
         pm.showAllProducts();
+
+        pm.saveToFile();
 
     }
 }
