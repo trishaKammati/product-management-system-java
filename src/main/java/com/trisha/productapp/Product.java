@@ -1,3 +1,5 @@
+package com.trisha.productapp;
+
 public class Product {
 
     private int id;
