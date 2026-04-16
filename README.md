@@ -1,105 +1,70 @@
-# 🛒 Product Management System (Java Backend)
+# 🛒 Product Management System (Spring Boot)
 
-## 📌 Overview
-
-A backend system built using Core Java, demonstrating step-by-step evolution from in-memory storage to a database-driven application using JDBC and MySQL.
-
----
-
-## 🚀 Features
-
-### ✅ Version 1 — Collections
-
-* Add Product
-* Remove Product
-* Update Product
-* Get Product by ID
-* View All Products
-* Used HashMap for in-memory storage
+## 📌 Overview  
+A backend REST API application built using Spring Boot to manage products with full CRUD operations, clean architecture, and structured API responses.
 
 ---
 
-### ✅ Version 2 — Exception Handling
+## 🚀 Features  
 
-* Custom Exceptions:
-
-  * DuplicateProductException
-  * ProductNotFoundException
-* Improved validation and error handling
-
----
-
-### ✅ Version 3 — File Handling
-
-* Data stored permanently in file
-* Implemented:
-
-  * saveToFile()
-  * loadFromFile()
-* Used:
-
-  * BufferedWriter
-  * BufferedReader
-* Data format: `id,name`
+- Add Product (POST)  
+- Get All Products (GET)  
+- Get Product by ID (GET)  
+- Update Product (PUT)  
+- Delete Product (DELETE)  
+- Global Exception Handling  
+- Structured API Responses using ApiResponse  
+- Layered Architecture (Controller → Service)  
 
 ---
 
-### ✅ Version 4 — JDBC + MySQL ⭐
+## 🧠 Concepts Used  
 
-* Connected Java application with MySQL database
-* Implemented full CRUD operations:
-
-  * INSERT (Add Product)
-  * SELECT (Get Product)
-  * UPDATE (Update Product)
-  * DELETE (Remove Product)
-* Used PreparedStatement for secure queries
-* Added PRIMARY KEY for data integrity
+- Spring Boot  
+- REST APIs  
+- Dependency Injection (@Autowired)  
+- Exception Handling (@RestControllerAdvice)  
+- ResponseEntity  
+- Clean Architecture  
+- JSON Handling  
 
 ---
 
-## 🧠 Concepts Used
+## 🛠️ Tech Stack  
 
-* Java Collections (HashMap)
-* OOP (Encapsulation, Classes)
-* Exception Handling
-* File Handling
-* JDBC
-* MySQL
-* CRUD Operations
+- Java  
+- Spring Boot  
+- Maven  
+- Postman (for testing)  
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Project Structure  
 
-* Java
-* MySQL
-* JDBC
+src/main/java/com.trisha.productapp/
+   ├── ProductController
+   ├── ProductService
+   ├── Product
+   ├── ApiResponse
+   ├── GlobalExceptionHandler
+   └── ProductappApplication
 
----
-
-## 📂 Project Structure
-
-* Product.java → Model
-* ProductManager.java → Business Logic (Collections + File + JDBC)
-* Main.java → Execution
 
 ---
 
-## 🎯 Learning Outcomes
+## 🎯 Learning Outcomes  
 
-* Built a real backend system step-by-step
-* Understood transition:
-
-  * Memory → File → Database
-* Learned JDBC integration with MySQL
-* Applied real-world backend logic and structure
+- Built a real backend application using Spring Boot  
+- Understood layered architecture (Controller → Service)  
+- Learned how APIs work in real-world applications  
+- Implemented proper exception handling and API response structure  
+- Gained hands-on experience with backend development  
 
 ---
 
-## 🚀 Future Improvements
+## 📌 Future Improvements  
 
-* Spring Boot (REST APIs)
-* Layered Architecture (Controller, Service, Repository)
-* Validation and DTOs
-* Authentication
+- Connect to database (MySQL)  
+- Add JPA / Hibernate  
+- Build full-stack application  
+- Deploy project  
