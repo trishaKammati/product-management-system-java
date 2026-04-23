@@ -100,6 +100,8 @@ com.trisha.productapp
   "timestamp": "2026-04-23T16:30:00"
 }
 
+---
+
 ⚙️ How to Run
 1.Clone the repository:
     git clone https://github.com/your-username/product-management-system-java.git
@@ -107,6 +109,8 @@ com.trisha.productapp
 3.Configure MySQL in application.properties
 4.Run:
    mvn spring-boot:run
+
+---
 
 #### 🎯 Learning Outcomes
 Built a real-world backend application using Spring Boot
@@ -117,12 +121,15 @@ Added validation for reliable input handling
 Designed structured and consistent API responses
 Handled exceptions globally for better error management
 
+---
+
 🚀 Future Improvements
 Add Swagger for API documentation
 Implement pagination and filtering
 Add authentication (Spring Security + JWT)
 Deploy application (Render / AWS)
 
+---
 
 👩‍💻 Author
 
