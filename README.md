@@ -106,13 +106,16 @@ com.trisha.productapp
 ---
 
 ## ⚙️ How to Run
-1.Clone the repository:
+-Clone the repository:
+```md
     git clone https://github.com/your-username/product-management-system-java.git
-2.Open in IntelliJ / any IDE
-3.Configure MySQL in application.properties
-4.Run:
+```
+-Open in IntelliJ / any IDE
+-Configure MySQL in application.properties
+-Run:
+```md
    mvn spring-boot:run
-
+```
 ---
 
 
