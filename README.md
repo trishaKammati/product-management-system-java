@@ -46,6 +46,7 @@ This project follows clean architecture principles and uses JPA for database int
 ---
 
 ## 📂 Project Structure
+```
 com.trisha.productapp
 ├── controller
 │ └── ProductController
@@ -62,7 +63,7 @@ com.trisha.productapp
 ├── response
 │ └── ApiResponse
 └── ProductAppApplication
-
+```
 
 ---
 
@@ -88,7 +89,9 @@ com.trisha.productapp
   "price": 50000
 }
 ```
-## 📥 Sample Response
+## 📤 Sample Response
+
+```json
 {
   "status": 201,
   "message": "Product created successfully",
@@ -99,10 +102,11 @@ com.trisha.productapp
   },
   "timestamp": "2026-04-23T16:30:00"
 }
-
+```
 ---
 
-⚙️ How to Run
+```md
+## ⚙️ How to Run
 1.Clone the repository:
     git clone https://github.com/your-username/product-management-system-java.git
 2.Open in IntelliJ / any IDE
@@ -112,22 +116,26 @@ com.trisha.productapp
 
 ---
 
-#### 🎯 Learning Outcomes
-Built a real-world backend application using Spring Boot
-Implemented clean layered architecture
-Used JPA for database persistence (no manual SQL)
-Applied DTO pattern for secure and flexible API design
-Added validation for reliable input handling
-Designed structured and consistent API responses
-Handled exceptions globally for better error management
+
+```md
+## 🎯 Learning Outcomes
+
+- Built a real-world backend application using Spring Boot  
+- Implemented clean layered architecture  
+- Used JPA for database persistence (no manual SQL)  
+- Applied DTO pattern for secure and flexible API design  
+- Added validation for reliable input handling  
+- Designed structured and consistent API responses  
+- Handled exceptions globally for better error management  
 
 ---
 
-🚀 Future Improvements
-Add Swagger for API documentation
-Implement pagination and filtering
-Add authentication (Spring Security + JWT)
-Deploy application (Render / AWS)
+## 🚀 Future Improvements
+
+- Add Swagger for API documentation  
+- Implement pagination and filtering  
+- Add authentication (Spring Security + JWT)  
+- Deploy application (Render / AWS)  
 
 ---
 
