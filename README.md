@@ -105,7 +105,6 @@ com.trisha.productapp
 ```
 ---
 
-```md
 ## ⚙️ How to Run
 1.Clone the repository:
     git clone https://github.com/your-username/product-management-system-java.git
@@ -117,7 +116,7 @@ com.trisha.productapp
 ---
 
 
-```md
+
 ## 🎯 Learning Outcomes
 
 - Built a real-world backend application using Spring Boot  
