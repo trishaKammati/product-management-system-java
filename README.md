@@ -87,7 +87,7 @@ com.trisha.productapp
   "name": "Laptop",
   "price": 50000
 }
-
+```
 ## 📥 Sample Response
 {
   "status": 201,
